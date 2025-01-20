@@ -137,12 +137,13 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     
-    torch.distributed.init_process_group(
-        backend='nccl',
-        world_size=int(os.getenv('WORLD_SIZE', '1')),
-        rank=int(os.getenv('RANK', '0')),
-    )
-    
+    if torch.cuda.device_count() > 1:
+        torch.distributed.init_process_group(
+            backend='nccl',
+            world_size=int(os.getenv('WORLD_SIZE', '1')),
+            rank=int(os.getenv('RANK', '0')),
+        )
+    is_distributed = torch.cuda.device_count() > 1
     torch.cuda.set_device(int(os.getenv('LOCAL_RANK', 0)))
     
     model = Qwen2AudioForConditionalGeneration.from_pretrained(
@@ -176,7 +177,7 @@ if __name__ == '__main__':
         sources.extend(source)
         audio_paths.extend(audio_path)
 
-    torch.distributed.barrier()
+    #torch.distributed.barrier()
 
     if torch.distributed.get_rank() == 0:
         print("Evaluating ...")
