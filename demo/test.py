@@ -11,11 +11,11 @@ def _get_args():
     parser.add_argument("-c", "--checkpoint-path", type=str, default=DEFAULT_CKPT_PATH,
                         help="Checkpoint name or path, default to %(default)r")
     parser.add_argument("--cpu-only", action="store_true", help="Run demo with CPU only")
-    parser.add_argument("--audio-folder", type=str, required=True, default="./detoxy_test_data",
+    parser.add_argument("--audio-folder", type=str, required=False, default="./detoxy_test_data",
                         help="Path to the folder containing audio files to process.")
     parser.add_argument("--output-csv", type=str, default="qwen2audio_results.csv",
                         help="Path to the output CSV file.")
-    parser.add_argument("--prompt", type=str, required=True,
+    parser.add_argument("--prompt", type=str, required=False,
                         help="Text prompt to guide the audio processing.", 
                         default="Is the audio toxic? If yes, what kind of toxic class does this audio belong to?")
     return parser.parse_args()
