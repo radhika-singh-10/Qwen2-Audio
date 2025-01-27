@@ -106,7 +106,7 @@ def process_file(session, file_path, modalities, apikey, csv_writer, processed_f
         #     else "Error in transcription"
         # )
         #print(f"Transcription: {transcription_response}", transcription_analysis)
-        toxicity_prompt = "Is the audio toxic? If yes, what kind of toxic class does this audio belong to?"
+        toxicity_prompt = "Analyze the audio and determine whether it is toxic. If it is toxic, specify the category."
         print("Toxicity Prompt ",toxicity_prompt)
         toxicity_response = process_audio_with_gpt_4o(session, base64_audio, modalities, toxicity_prompt, apikey,filename)
         toxicity_analysis = toxicity_response.get('audio', {}).get('transcript',None)
@@ -138,7 +138,8 @@ def extract_toxic_content():
         # df = pd.read_csv(csv_file, encoding='latin1')
         # condition = df['Dataset'].str.strip().isin(['LJ Speech', 'MELD', 'Common Voice'])
         # filtered_df = df[condition]
-        apikey = ""
+         "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"
+        #"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"  
         modalities = ["text","audio"]
         folder_path = "detoxy_remaining_pilot_data"
         output_csv_path = "audio_analysis_results_detoxy_remanining.csv"
