@@ -102,7 +102,7 @@ def predict(chatbot, task_history):
     task_history.append({'role': 'assistant',
                          'content': response})
     chatbot.append((None, response))  
-    with open('qwen2audio_detoxy_results.csv', mode="a", newline="") as csv_file:
+    with open('qwen2audio_mutox_cot_results.csv', mode="a", newline="") as csv_file:
         writer = csv.writer(csv_file)
         if csv_file.tell() == 0: 
             writer.writerow([ "Audio URL", "Response"])
