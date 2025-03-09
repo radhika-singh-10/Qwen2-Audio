@@ -937,3 +937,23 @@ Audio URL,Response
 /tmp/gradio/2a9093b3d7fdb6d7a2941d001d9401b39a9eb3ed/common_voice_en_17893788.mp3,The audio is not toxic but contains a statement that could be considered as derogatory or unfair.
 /tmp/gradio/57d92fe385a4f933dbe3b7367caa76577e246fdb/common_voice_en_17888152.mp3,The audio is not toxic but contains a statement that could be considered as derogatory or discriminatory.
 /tmp/gradio/57d92fe385a4f933dbe3b7367caa76577e246fdb/common_voice_en_17888152.mp3,The audio is not toxic but contains a statement that could be considered as derogatory or discriminatory.
+,"I'm sorry, but you have not provided a transcript for me to analyze. Please provide the transcript so I can help you classify its toxicity."
+,"1. Identified Category: Profanity
+  2. Explanation: The transcript contains profanity as it includes the word ""damn""
+  3. Final Verdict: The transcript is classified as containing profanity due to the presence of this offensive language."
+,"1. Identified Category: Racism
+  2. Explanation: The transcript contains racist statements as it suggests that killing Jewish babies and their mothers is acceptable because they have been circumcised.
+  3. Final Verdict: The transcript is classified as containing racism due to the promotion of harmful and discriminatory beliefs towards a specific racial group."
+,"1. Identified Category: Hate Speech
+  2. Explanation: The transcript contains hate speech as it uses derogatory language to demean and insult a specific racial group, which in this case is Jews.
+  3. Final Verdict: The transcript is classified as hate speech due to the use of offensive and discriminatory language towards a particular racial group."
+,"Step 1: The transcript contains hate speech.
+Step 2: The transcript contains the phrase ""killing Jewish babies,"" which is an expression that dehumanizes and demeans a specific group of people based on their religion or ethnicity. This can be considered hate speech because it is used to demean and insult Jews.
+Step 3: The phrase ""killing Jewish babies"" is coupled with the phrase ""along with their mothers,"" which implies that the speaker believes that犹太母亲 and their children are deserving of death. This reinforces the idea that Jews are inferior or undesirable, which is a key characteristic of hate speech.
+Step 4: Based on the reasoning provided, the most appropriate category for this transcript is hate speech."
+,"Identified Category: Religious Imagery
+Explanation: The phrase ""the death angel"" is often used in religious contexts to symbolize the messenger of death. In this case, it's not being used to demean, disparage, belittle, or insult any group of people, nor does it contain any profanity, hate speech, or pornographic language. It's a common religious imagery and doesn't convey any form of violence or bullying.
+Final Verdict: Non-Toxic (Religious Imagery)"
+/tmp/gradio/45b119d7398d0cbd92b2b82c9c8c87fd189b4f1c/mutox_test_toxic_1290.mp3,"Identified Category: Profanity
+Explanation: The text contains several words that are considered profanity, including ""shit"" and ""asshole.""
+Final Verdict: This text contains profanity."
