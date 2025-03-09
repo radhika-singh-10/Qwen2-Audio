@@ -6,7 +6,7 @@ import librosa
 from transformers import AutoProcessor, Qwen2AudioForConditionalGeneration
 from argparse import ArgumentParser
 
-DEFAULT_CKPT_PATH = 'Qwen/Qwen2-Audio-7B' #'Qwen/Qwen2-Audio-7B-Instruct'
+DEFAULT_CKPT_PATH = 'Qwen/Qwen2-Audio-7B-Instruct'# 'Qwen/Qwen2-Audio-7B' 
 
 
 def _get_args():
